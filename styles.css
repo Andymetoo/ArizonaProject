@@ -1,0 +1,115 @@
+    html, body {
+        height: 100%; 
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column; 
+        font-family: Arial, sans-serif;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    header, nav, main, footer {
+        padding: 20px;
+    }
+
+    header {
+        background-color: #606c38;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #social-media-buttons {
+        float: right;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    nav {
+        background-color: #fefae0;
+        padding: 10px 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0; 
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: darkblue;
+    }
+
+    #main-content {
+        background-color: #dda15e;
+        flex: 2;  
+        padding: 20px;
+        margin-right: 20px; 
+    }
+
+    aside {
+        background-color: #bc6c25;
+        flex: 1;
+        padding: 20px;
+    }
+
+    footer {
+        background-color: #283618;
+        color: black;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        position: relative;
+    }
+
+    main {
+        display: flex; 
+        flex: 1; 
+        padding-bottom: 40px; 
+    }
+
+    @media screen and (max-width: 768px) {
+        main {
+            flex-direction: column;
+        }
+
+        aside {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+    }
+
+    #gallery .row img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+        #gallery {
+            grid-template-columns: 1fr; 
+        }
+    }
+
